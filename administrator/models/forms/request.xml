@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_PM_SIC_FORM_LBL_REQUEST_CREATED_BY" description="COM_PM_SIC_FORM_DESC_REQUEST_CREATED_BY" hidden="true" hint="COM_PM_SIC_FORM_LBL_REQUEST_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_PM_SIC_FORM_LBL_REQUEST_MODIFIED_BY" description="COM_PM_SIC_FORM_DESC_REQUEST_MODIFIED_BY" hidden="true" hint="COM_PM_SIC_FORM_LBL_REQUEST_MODIFIED_BY"/>
+    <field name="name" filter="safehtml" type="text" class="pm-status-name" required="true" message="Please fill the name" label="COM_PM_SIC_FORM_LBL_REQUEST_NAME" description="COM_PM_SIC_FORM_DESC_REQUEST_NAME" hint="COM_PM_SIC_FORM_LBL_REQUEST_NAME"/>
+    <field name="situation" extension="com_pm_sic" type="category" class="pm-status-situation" label="COM_PM_SIC_FORM_LBL_REQUEST_SITUATION" description="COM_PM_SIC_FORM_DESC_REQUEST_SITUATION" hint="COM_PM_SIC_FORM_LBL_REQUEST_SITUATION"/>
+    <field name="cpf" filter="safehtml" type="text" class="pm-status-cpf" required="true" message="Please fill the CPF " label="COM_PM_SIC_FORM_LBL_REQUEST_CPF" description="COM_PM_SIC_FORM_DESC_REQUEST_CPF" hint="COM_PM_SIC_FORM_LBL_REQUEST_CPF"/>
+    <field name="rg" filter="safehtml" type="text" class="pm-status-rg" required="true" message="Please fill the RG " label="COM_PM_SIC_FORM_LBL_REQUEST_RG" description="COM_PM_SIC_FORM_DESC_REQUEST_RG" hint="COM_PM_SIC_FORM_LBL_REQUEST_RG"/>
+    <field name="telephone" filter="safehtml" type="text" class="pm-status-telephone" required="true" message="Please fill the Telephone" label="COM_PM_SIC_FORM_LBL_REQUEST_TELEPHONE" description="COM_PM_SIC_FORM_DESC_REQUEST_TELEPHONE" hint="COM_PM_SIC_FORM_LBL_REQUEST_TELEPHONE"/>
+    <field name="email" validate="email" type="email" class="pm-status-email" required="true" message="Please fill the Email" label="COM_PM_SIC_FORM_LBL_REQUEST_EMAIL" description="COM_PM_SIC_FORM_DESC_REQUEST_EMAIL" hint="COM_PM_SIC_FORM_LBL_REQUEST_EMAIL"/>
+    <field name="cep" filter="safehtml" type="text" class="pm-status-cep" required="true" message="Please fill the CEP" label="COM_PM_SIC_FORM_LBL_REQUEST_CEP" description="COM_PM_SIC_FORM_DESC_REQUEST_CEP" hint="COM_PM_SIC_FORM_LBL_REQUEST_CEP"/>
+    <field name="address" filter="safehtml" type="text" class="pm-status-address" required="true" message="Please fill the Address" label="COM_PM_SIC_FORM_LBL_REQUEST_ADDRESS" description="COM_PM_SIC_FORM_DESC_REQUEST_ADDRESS" hint="COM_PM_SIC_FORM_LBL_REQUEST_ADDRESS"/>
+    <field name="complement" filter="safehtml" type="text" class="pm-status-complement" label="COM_PM_SIC_FORM_LBL_REQUEST_COMPLEMENT" description="COM_PM_SIC_FORM_DESC_REQUEST_COMPLEMENT" hint="COM_PM_SIC_FORM_LBL_REQUEST_COMPLEMENT"/>
+    <field name="neighborhood" filter="safehtml" type="text" class="pm-status-neighborhood" label="COM_PM_SIC_FORM_LBL_REQUEST_NEIGHBORHOOD" description="COM_PM_SIC_FORM_DESC_REQUEST_NEIGHBORHOOD" hint="COM_PM_SIC_FORM_LBL_REQUEST_NEIGHBORHOOD"/>
+    <field name="city" filter="safehtml" type="text" class="pm-status-city" required="true" message="Please fill the City" label="COM_PM_SIC_FORM_LBL_REQUEST_CITY" description="COM_PM_SIC_FORM_DESC_REQUEST_CITY" hint="COM_PM_SIC_FORM_LBL_REQUEST_CITY"/>
+    <field name="country_state" type="list" class="pm-status-country-state" required="true" message="Please fill the Country State/Country Province" label="COM_PM_SIC_FORM_LBL_REQUEST_COUNTRY_STATE" description="COM_PM_SIC_FORM_DESC_REQUEST_COUNTRY_STATE" hint="COM_PM_SIC_FORM_LBL_REQUEST_COUNTRY_STATE">
+      <option value="AC">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_AC</option>
+      <option value="AL">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_AL</option>
+      <option value="AP">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_AP</option>
+      <option value="AM">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_AM</option>
+      <option value="BA">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_BA</option>
+      <option value="CE">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_CE</option>
+      <option value="DF">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_DF</option>
+      <option value="ES">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_ES</option>
+      <option value="GO">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_GO</option>
+      <option value="MA">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_MA</option>
+      <option value="MT">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_MT</option>
+      <option value="MS">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_MS</option>
+      <option value="MG">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_MG</option>
+      <option value="PA">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_PA</option>
+      <option value="PB">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_PB</option>
+      <option value="PR">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_PR</option>
+      <option value="PE">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_PE</option>
+      <option value="PI">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_PI</option>
+      <option value="RJ">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_RJ</option>
+      <option value="RN">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_RN</option>
+      <option value="RS">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_RS</option>
+      <option value="RO">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_RO</option>
+      <option value="RR">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_RR</option>
+      <option value="SC">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_SC</option>
+      <option value="SP">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_SP</option>
+      <option value="SE">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_SE</option>
+      <option value="TO">COM_PM_SIC_REQUESTS_COUNTRY_STATE_OPTION_TO</option>
+    </field>
+    <field name="order" multiple="true" type="list" class="pm-status-order" required="true" message="Please choose  a Order Type" label="COM_PM_SIC_FORM_LBL_REQUEST_ORDER" description="COM_PM_SIC_FORM_DESC_REQUEST_ORDER" hint="COM_PM_SIC_FORM_LBL_REQUEST_ORDER">
+      <option value="informacao">COM_PM_SIC_REQUESTS_ORDER_OPTION_INFORMACAO</option>
+      <option value="declaracao">COM_PM_SIC_REQUESTS_ORDER_OPTION_DECLARACAO</option>
+      <option value="certidao_de_valor_venal">COM_PM_SIC_REQUESTS_ORDER_OPTION_CERTIDAO_DE_VALOR_VENAL</option>
+      <option value="certidao_negativa_de_debitos">COM_PM_SIC_REQUESTS_ORDER_OPTION_CERTIDAO_NEGATIVA_DE_DEBITOS</option>
+      <option value="copias_de_leis_decretos_ou_portarias_municipais">COM_PM_SIC_REQUESTS_ORDER_OPTION_COPIAS_DE_LEIS_DECRETOS_OU_PORTARIAS_MUNICIPAIS</option>
+      <option value="segunda_via_de_alvara">COM_PM_SIC_REQUESTS_ORDER_OPTION_SEGUNDA_VIA_DE_ALVARA</option>
+      <option value="segunda_via_de_carne">COM_PM_SIC_REQUESTS_ORDER_OPTION_SEGUNDA_VIA_DE_CARNE</option>
+      <option value="certidao_de_viabilidade_de_instalacao">COM_PM_SIC_REQUESTS_ORDER_OPTION_CERTIDAO_DE_VIABILIDADE_DE_INSTALACAO</option>
+      <option value="alteracao_cadastral">COM_PM_SIC_REQUESTS_ORDER_OPTION_ALTERACAO_CADASTRAL</option>
+      <option value="outras_nao_especificadas_anteriormente">COM_PM_SIC_REQUESTS_ORDER_OPTION_OUTRAS_NAO_ESPECIFICADAS_ANTERIORMENTE</option>
+    </field>
+    <field name="other_order" filter="safehtml" type="text" class="pm-status-other-order" label="COM_PM_SIC_FORM_LBL_REQUEST_OTHER_ORDER" description="COM_PM_SIC_FORM_DESC_REQUEST_OTHER_ORDER" hint="COM_PM_SIC_FORM_LBL_REQUEST_OTHER_ORDER" showon="order:outras_nao_especificadas_anteriormente"/>
+    <field name="informations" editor="tiny_mce|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_PM_SIC_FORM_LBL_REQUEST_INFORMATIONS" description="COM_PM_SIC_FORM_DESC_REQUEST_INFORMATIONS" hint="COM_PM_SIC_FORM_LBL_REQUEST_INFORMATIONS"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_pm_sic" section="request"/>
+  </fieldset>
+</form>
